@@ -33,4 +33,5 @@ yarn-error.log*
 # vercel
 .vercel
 
-website/node_modules
+website/node_modules/
+website/node_modules/.bin/acorn
