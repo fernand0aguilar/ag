@@ -1,4 +1,5 @@
 import Container from '../components/container'
+import Header from '../components/header'
 import MoreStories from '../components/more-stories'
 import HeroPost from '../components/hero-post'
 import Intro from '../components/intro'
@@ -9,13 +10,14 @@ import { CMS_NAME } from '../lib/constants'
 
 export default function Index({ allPosts, preview }) {
   const heroPost = allPosts[0]
-  const morePosts = allPosts.slice(1)
+  const morePosts = allPosts
   return (
     <>
       <Layout preview={preview}>
         <Head>
-          <title>Next.js Blog Example with {CMS_NAME}</title>
+          <title>Alexandar Gligorijevich</title>
         </Head>
+        <Header></Header>
         <Container>
           <Intro />
           {heroPost && (
