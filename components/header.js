@@ -7,7 +7,7 @@ export default function Header() {
         <a className="hover:underline">Alexandar Gligorijevich</a>
       </Link>
       .
-      <p className="header-btn">This is the header</p>
+      <p className="header-btn">This is not the header anymore</p>
     </h2>
   )
 }

@@ -12,8 +12,10 @@ export default function HeroPost({
   slug,
 }) {
   return (
+    //  TODO -> flipping the pictures in every 5 seconds and then the user can control and stop it. a little icon that you can press to change
+    // it start stopped and the it goes on after you click it for the first time. with gifs and videos maybe
     <section>
-      <div className="mb-8 md:mb-16">
+      <div className="mb-3 md:mb-16">
         <CoverImage slug={slug} title={title} url={coverImage} />
       </div>
       <div className="md:grid md:grid-cols-2 md:col-gap-16 lg:col-gap-8 mb-20 md:mb-28">
