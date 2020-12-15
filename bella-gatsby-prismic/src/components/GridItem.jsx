@@ -17,7 +17,7 @@ const Item = styled(Flex)`
     flex-basis: 100%;
     max-width: 100%;
     width: 100%;
-    margin-top: 3rem !important;
+    margin-top: 10rem !important;
   }
 `;
 
@@ -65,7 +65,6 @@ const Overlay = styled(Flex)`
 `;
 
 const StyledLink = styled(Link)`
-  position: relative;
   transition: transform 300ms cubic-bezier(0.39, 0.575, 0.565, 1);
   .gatsby-image-outer-wrapper {
     position: static !important;
@@ -95,7 +94,7 @@ const StyledLink = styled(Link)`
 `;
 
 const GridItem = ({ uid, image, alt, title, subtitle }) => (
-  <Item flexDirection="column" key={uid} style={{ marginTop: `${randomNumber(4, 8) * 2}rem` }}>
+  <Item flexDirection="column" key={uid}>
     <StyledLink to={uid}>
       <Overlay justifyContent="center" alignItems="center" flexDirection="column">
         <span>view</span>
@@ -103,8 +102,8 @@ const GridItem = ({ uid, image, alt, title, subtitle }) => (
       </Overlay>
       <Img fluid={image} alt={alt} />
     </StyledLink>
-    <ItemTitle>{title}</ItemTitle>
-    <ItemSubtitle>{subtitle}</ItemSubtitle>
+    {/* <ItemTitle>{title}</ItemTitle>
+    <ItemSubtitle>{subtitle}</ItemSubtitle> */}
   </Item>
 );
 

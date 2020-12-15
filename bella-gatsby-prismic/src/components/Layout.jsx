@@ -14,7 +14,7 @@ injectGlobal`
   }
   html {
     text-rendering: optimizeLegibility;
-    overflow-x: hidden;
+    overflow: hidden;
     box-sizing: border-box;
     -ms-overflow-style: scrollbar;
     -webkit-tap-highlight-color: rgba(0, 0, 0, 0);

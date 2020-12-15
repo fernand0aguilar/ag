@@ -6,6 +6,7 @@ import styled from 'react-emotion';
 import Img from 'gatsby-image';
 import { Box } from 'grid-emotion';
 import Layout from '../components/Layout';
+import Header from '../components/Header';
 import Footer from '../components/Footer';
 import SEO from '../components/SEO';
 import config from '../../config/website';
@@ -94,21 +95,24 @@ const Content = styled.main`
 const CaseTemplate = ({ data: { prismicCaseStudy: caseNode } }) => {
   const { data } = caseNode;
   return (
-    <Layout>
-      <Helmet title={`${data.title.text} | ${config.siteTitle}`} />
-      <SEO caseNode={caseNode} casePath={caseNode.uid} caseSEO />
-      <Hero>
-        <Img fluid={data.header_image.localFile.childImageSharp.fluid} />
-        <TitleWrapper py={4}>
-          <Title>{data.title.text}</Title>
-        </TitleWrapper>
-      </Hero>
-      <Wrapper py={4} px={4} mx="auto">
-        <SubTitle>{data.subtitle.text}</SubTitle>
-        <Content dangerouslySetInnerHTML={{ __html: data.content.html }} />
-      </Wrapper>
-      <Footer isCase />
-    </Layout>
+    <div>
+      <Layout>
+        <Header isCase="true" />
+        <Helmet title={`${data.title.text} | ${config.siteTitle}`} />
+        <SEO caseNode={caseNode} casePath={caseNode.uid} caseSEO />
+        <Hero>
+          <Img fluid={data.header_image.localFile.childImageSharp.fluid} />
+          <TitleWrapper py={4}>
+            <Title>{data.title.text}</Title>
+          </TitleWrapper>
+        </Hero>
+        <Wrapper py={4} px={4} mx="auto">
+          <SubTitle>{data.subtitle.text}</SubTitle>
+          <Content dangerouslySetInnerHTML={{ __html: data.content.html }} />
+        </Wrapper>
+        <Footer isCase />
+      </Layout>
+    </div>
   );
 };
 

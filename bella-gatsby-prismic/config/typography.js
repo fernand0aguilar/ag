@@ -2,46 +2,22 @@ import Typography from 'typography';
 
 const typography = new Typography({
   title: 'Gatsby Starter Portfolio Bella',
-  baseFontSize: '18px',
+  baseFontSize: '12px',
   baseLineHeight: 1.45,
   headerFontFamily: [
-    'Bree Serif',
-    '-apple-system',
-    'BlinkMacSystemFont',
-    'Segoe UI',
-    'Roboto',
-    'Helvetica',
-    'Arial',
-    'sans-serif',
-    'Apple Color Emoji',
-    'Segoe UI Emoji',
-    'Segoe UI Symbol',
+   'Montserrat Bold'
   ],
   bodyFontFamily: [
-    'Open Sans',
-    '-apple-system',
-    'BlinkMacSystemFont',
-    'Segoe UI',
-    'Roboto',
-    'Helvetica',
-    'Arial',
-    'sans-serif',
-    'Apple Color Emoji',
-    'Segoe UI Emoji',
-    'Segoe UI Symbol',
+    'Montserrat'
   ],
   googleFonts: [
     {
-      name: 'Bree Serif',
-      styles: ['400'],
-    },
-    {
-      name: 'Open Sans',
+      name: 'Montserrat',
       styles: ['400'],
     },
   ],
   scaleRatio: 3.998,
-  headerWeight: 700,
+  headerWeight: 900,
   overrideStyles: () => ({
     img: {
       marginBottom: 0,

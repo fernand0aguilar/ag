@@ -12,8 +12,8 @@ const Hero = styled.header`
 `
 
 const HeroInner = styled(Wrapper)`
-  padding-top: 13rem;
-  padding-bottom: 13rem;
+  padding-top: 0;
+  padding-bottom: 0;
   h1 {
     margin-bottom: 2rem;
   }
@@ -80,7 +80,7 @@ const ProjectListing = styled.ul`
   margin-left: 0;
   margin-top: 4rem;
   li {
-    margin-bottom: 1.45rem;
+    margin-bottom: 0;
     a {
       font-size: 2.369rem;
       font-style: normal;
@@ -93,7 +93,6 @@ const ProjectListing = styled.ul`
 `
 
 const IndexWrapper = Wrapper.withComponent('main')
-
 class Index extends Component {
   render() {
     const {
@@ -118,13 +117,17 @@ class Index extends Component {
           <Title style={{ marginTop: '4rem' }}>Recent posts</Title>
           <Listing posts={posts.nodes} />
           <Title style={{ marginTop: '8rem' }}>Recent projects</Title>
-          <ProjectListing>
-            {projects.nodes.map((project) => (
-              <li key={project.primary.label.text}>
-                <a href={project.primary.link.url}>{project.primary.label.text}</a>
-              </li>
-            ))}
-          </ProjectListing>
+            <Row>
+              <Column>
+                <ProjectListing>
+                  {projects.nodes.map((project) => (
+                    <li key={project.primary.label.text}>
+                      <a href={project.primary.link.url}>{project.primary.label.text}</a>
+                    </li>
+                  ))}
+                </ProjectListing>
+              </Column>
+            </Row>
         </IndexWrapper>
       </Layout>
     )
