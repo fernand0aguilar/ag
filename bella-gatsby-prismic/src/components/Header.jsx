@@ -5,6 +5,7 @@ import { Link } from 'gatsby';
 import { Flex } from 'grid-emotion';
 
 const Wrapper = styled.header`
+  
   background: ${props => props.theme.colors.greyMedium};
   color: ${props => props.theme.colors.text};
   a {

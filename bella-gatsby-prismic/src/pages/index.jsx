@@ -3,6 +3,8 @@ import PropTypes from 'prop-types';
 import { graphql } from 'gatsby';
 import Carousel, { Dots } from '@brainhubeu/react-carousel';
 import styled from 'react-emotion';
+import MenuBar from '../components/SideMenu';
+
 import '@brainhubeu/react-carousel/lib/style.css';
 
 import Header from '../components/Header';
@@ -25,6 +27,7 @@ const IndexPage = ({
   return (
     <Layout>
       <Header />
+      <MenuBar value={value} onChange={setValue} />
       <Carousel value={value} onChange={onChange} plugins={['arrows', 'infinite', 'fastSwipe']}>
         {edges.map(c => (
           <StyledCustomHeightDiv>
